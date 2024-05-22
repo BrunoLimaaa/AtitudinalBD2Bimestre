@@ -1,0 +1,21 @@
+1- SELECT nome, nota_bimestral
+FROM alunos
+WHERE nota_bimestral > 7.0;
+
+2-
+SELECT nome, 
+       (0.10 * nota_atitudinal + 0.30 * nota_mensal + 0.50 * nota_bimestral) 
+AS media_final
+FROM alunos
+HAVING media_final > 7.0;
+
+3-
+SELECT nome, 
+       (0.10 * nota_atitudinal + 0.30 * nota_mensal + 0.50 * nota_bimestral) 
+       AS media_final, 
+       nota_bimestral,
+      FROM alunos,
+     WHERE curso_id = 1,
+  AND nota_bimestral > 7.0
+  AND (0.10 * nota_atitudinal + 0.30 * nota_mensal + 0.50 * nota_bimestral) > 7.0;
+
